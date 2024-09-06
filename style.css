@@ -1,0 +1,239 @@
+/* Ensure general reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root color variables */
+:root {
+    --background: #000430;
+    --secondrybackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+/* Body styling */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Platypi", serif;
+}
+
+/* Container styling */
+.container {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+/* Stats container styling */
+.stats-container {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--purple);
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Details styling */
+.details {
+    width: 100%;
+}
+
+/* Numbers styling */
+#numbers {
+    width: 80px;
+    height: 80px;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Progress bar styling */
+#progressBar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--secondrybackground);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress {
+    width: 0%;
+    height: 8px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Form styling */
+form {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Change to row to align input and button */
+    gap: 10px;
+    align-items: center; /* Vertically center the items */
+}
+
+form input {
+    flex: 1;
+    padding: 12px;
+    background-color: var(--secondrybackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    border: none;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Task item styling */
+.taskItem {
+    display: flex;
+    background-color: var(--secondrybackground);
+    padding: 8px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.taskItem i {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: var(--teal);
+}
+
+/* Responsive Design */
+
+/* For tablets and larger phones */
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .stats-container {
+        gap: 30px;
+    }
+
+    #numbers {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+    }
+
+    form {
+        gap: 15px; /* Increase gap between input and button */
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .task {
+        font-size: 20px;
+    }
+
+    .taskItem i {
+        width: 30px;
+        height: 30px;
+    }
+
+    .checkbox {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .stats-container {
+        gap: 40px;
+    }
+
+    #numbers {
+        width: 120px;
+        height: 120px;
+        font-size: 35px;
+    }
+
+    form {
+        gap: 20px; /* Adjust gap for larger screens */
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .task {
+        font-size: 22px;
+    }
+
+    .taskItem i {
+        width: 32px;
+        height: 32px;
+    }
+
+    .checkbox {
+        width: 26px;
+        height: 26px;
+    }
+}
